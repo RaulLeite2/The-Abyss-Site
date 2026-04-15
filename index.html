@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Abyss – Development Group</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>TheAbyss<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-label">Welcome to</p>
+      <h1 class="hero-title">The Abyss</h1>
+      <p class="hero-subtitle">
+        A collective of developers diving deep to build remarkable software.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">Our Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-sub">Who we are and what drives us</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            <strong>The Abyss</strong> is a passionate development group dedicated to
+            crafting high-quality software solutions. We explore the depths of
+            technology—from low-level systems programming to modern web
+            applications—and bring ideas to life with clean code and thoughtful
+            design.
+          </p>
+          <p>
+            Founded by a group of friends who share a love for programming, we
+            thrive on challenges, open-source collaboration, and continuous
+            learning.
+          </p>
+        </div>
+        <div class="about-cards">
+          <div class="card">
+            <div class="card-icon">&#128187;</div>
+            <h3>Full-Stack Dev</h3>
+            <p>End-to-end solutions from robust back-ends to polished front-ends.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#128293;</div>
+            <h3>Performance</h3>
+            <p>We care deeply about speed, efficiency, and scalable architecture.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#128101;</div>
+            <h3>Open Source</h3>
+            <p>Building in the open and giving back to the developer community.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">&#128204;</div>
+            <h3>Innovation</h3>
+            <p>Always experimenting with cutting-edge tech and new ideas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">A glimpse of what we've been building</p>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#128230;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>DeepLink API</h3>
+          <p>A high-performance REST API service built with Go, designed for real-time data processing at scale.</p>
+          <div class="project-tags">
+            <span>Go</span><span>PostgreSQL</span><span>Docker</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#127758;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>Abyss UI Kit</h3>
+          <p>A minimal, dark-themed React component library for building stunning developer-focused interfaces.</p>
+          <div class="project-tags">
+            <span>React</span><span>TypeScript</span><span>Storybook</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#128295;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>VoidShell</h3>
+          <p>A custom terminal emulator and shell with scriptable macros, themes, and plugin support.</p>
+          <div class="project-tags">
+            <span>Rust</span><span>WASM</span><span>CLI</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#129302;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>AbyssBot</h3>
+          <p>An AI-powered Discord bot for developer communities—code review, docs lookup, and project tracking.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Discord.py</span><span>LLM</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#128200;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>Depth Analytics</h3>
+          <p>Lightweight event tracking and analytics dashboard with privacy-first principles and no cookies.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>SQLite</span><span>Charts</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#128274;</span>
+            <div class="project-links">
+              <a href="#" aria-label="Source code">&#128279;</a>
+            </div>
+          </div>
+          <h3>CryptVault</h3>
+          <p>A CLI tool for managing secrets and environment variables with end-to-end encryption.</p>
+          <div class="project-tags">
+            <span>Node.js</span><span>AES-256</span><span>CLI</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM ========== -->
+  <section id="team">
+    <div class="container">
+      <h2 class="section-title">The Team</h2>
+      <p class="section-sub">The people diving into the abyss</p>
+      <div class="team-grid">
+
+        <div class="member-card">
+          <div class="member-avatar">RL</div>
+          <h3>Raul Leite</h3>
+          <p class="member-role">Founder &amp; Lead Developer</p>
+          <p class="member-bio">Full-stack developer with a passion for systems programming and open-source.</p>
+          <div class="member-links">
+            <a href="https://github.com/RaulLeite2" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">&#43;</div>
+          <h3>Want to join?</h3>
+          <p class="member-role">Open Position</p>
+          <p class="member-bio">We're always looking for passionate developers. Reach out!</p>
+          <div class="member-links">
+            <a href="#contact">Contact us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Drop into the abyss – we'd love to hear from you</p>
+      <div class="contact-wrapper">
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <p class="form-notice" id="formNotice"></p>
+        </form>
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="info-icon">&#128231;</span>
+            <div>
+              <strong>Email</strong>
+              <p>theabyss@example.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#128038;</span>
+            <div>
+              <strong>GitHub</strong>
+              <p><a href="https://github.com/RaulLeite2" target="_blank" rel="noopener">github.com/RaulLeite2</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#127758;</span>
+            <div>
+              <strong>Location</strong>
+              <p>Brazil 🇧🇷</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">
+        <span class="logo-bracket">&lt;</span>TheAbyss<span class="logo-bracket">/&gt;</span>
+      </span>
+      <p class="footer-copy">&copy; 2026 The Abyss. Built with passion and dark coffee.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
