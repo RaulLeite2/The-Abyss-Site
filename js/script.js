@@ -149,39 +149,29 @@ revealEls.forEach((el) => revealObserver.observe(el));
   });
 })();
 
-// ---- Contact form ----
-const contactForm = document.getElementById('contactForm');
-const formNotice  = document.getElementById('formNotice');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name  = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const msg   = contactForm.message.value.trim();
-
-    if (!name || !email || !msg) {
-      formNotice.textContent = 'Please fill in all fields.';
-      formNotice.className   = 'form-notice error';
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      formNotice.textContent = 'Please enter a valid email address.';
-      formNotice.className   = 'form-notice error';
-      return;
-    }
-
-    const btn = contactForm.querySelector('button[type="submit"]');
-    btn.disabled     = true;
-    btn.textContent  = 'Sending…';
-
-    setTimeout(() => {
-      formNotice.textContent = "✓ Message sent! We'll reach back soon.";
-      formNotice.className   = 'form-notice success';
-      contactForm.reset();
-      btn.disabled    = false;
-      btn.textContent = 'Enter the Abyss';
-    }, 1200);
-  });
+// ---- Project Modals ----
+function openProjectModal(project) {
+  const modal = document.getElementById(project + 'Modal');
+  if (modal) {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
 }
+
+function closeProjectModal(project, event) {
+  const modal = document.getElementById(project + 'Modal');
+  if (modal && (!event || event.target === modal)) {
+    modal.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.project-modal.open').forEach((modal) => {
+      modal.classList.remove('open');
+    });
+    document.body.style.overflow = 'auto';
+  }
+});
